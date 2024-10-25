@@ -1,1 +1,2 @@
 from .user_based_cf import UserBasedMemoryCF
+from .item_based_cf import ItemBasedMemoryCF
