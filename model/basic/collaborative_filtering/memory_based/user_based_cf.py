@@ -14,7 +14,8 @@ class UserBasedMemoryCF:
             self.user_similarity_matrix = np.corrcoef(self.user_item_matrix)
         else:
             raise ValueError("Unsupported similarity metric.")
-        print("User similarity matrix computed.")
+        
+        np.fill_diagonal(self.user_similarity_matrix, 0)
     
     def predict_feedback(self, user_id):
         if self.user_similarity_matrix is None:
