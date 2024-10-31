@@ -61,4 +61,33 @@ graph LR
 
 ```
 
-## Data
+### Basic Models:
+- Collaborative Filtering
+  - Memory-Based
+    - [User-based Collaborative Filtering](model/basic/collaborative_filtering/memory_based/user_based_cf.py)
+    - [Item-based Collaborative Filtering](model/basic/collaborative_filtering/memory_based/item_based_cf.py)
+  - Model-Based (Unsupervised)
+    - Matrix Factorization
+        - [SVD](model/basic/collaborative_filtering/model_based/unsupervised/clustering_kmeans_cf.py)
+        - [NMF](model/basic/collaborative_filtering/model_based/unsupervised/matrix_factorization_nmf_cf.py)
+    - Clustering
+        - [KMeans](model/basic/collaborative_filtering/model_based/unsupervised/clustering_kmeans_cf.py)
+
+(other models coming soon)
+
+
+## Data Builder
+
+### User-Item Matrix
+The User-Item Matrix is designed to handle both implicit and explicit feedback for recommendation systems.
+
+It is constructed using three parts:
+
+- **user_id**: A unique identifier for each user in the system.
+- **item_id**: A unique identifier for each item in the system. 
+- **feedback**: The interaction or response from the user regarding the item.
+
+This matrix can be used with various models, including:
+
+- [**Memory-Based Collaborative Filtering**](model/basic/collaborative_filtering/memory_based)
+- [**Model-Based Collaborative Filtering**](model/basic/collaborative_filtering/model_based)
