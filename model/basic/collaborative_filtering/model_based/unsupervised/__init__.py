@@ -1,2 +1,3 @@
 from .matrix_factorization_svd_cf import SVDModelCF
 from .matrix_factorization_nmf_cf import NMFModelCF
+from .clustering_kmeans_cf import KMeansModelCF
